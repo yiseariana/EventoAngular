@@ -1,0 +1,263 @@
+body {
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+    min-height: 100%;
+    width: 100%;
+}
+
+.navbar-orange {
+    border-color: transparent;
+    background-color: #FFBF00;
+    font-weight: normal;
+}
+
+.navbar-orange .navbar-brand {
+    font-weight: 500;
+    font-size: 20px;
+}
+.navbar-toggle {
+    border-color: transparent;
+    /*border: 0px solid transparent;*/
+}
+.navbar-orange .navbar-nav > li > a:hover {
+    background-color: #ffb600;
+    border-color: #ffb600;
+    color: #000000;
+}
+
+.navbar-orange .navbar-nav > .active > a, .navbar-orange .navbar-nav > li > a:focus {
+    background-color: #ffd400;
+    color: #000000;
+}
+
+a {
+    color: #fff;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
+.content {
+    padding-top: 50px;
+    color: black;
+    padding: 60px 0px;
+}
+
+.content-header {
+    font-size: 48px;
+}
+
+.header {
+    background-image: url(../images/header_bg.jpg);
+    /*background-image: url(http://placehold.it/1024x768);*/
+    background-attachment: scroll !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+}
+.header-inner {
+    text-align: center;
+    min-height: 200px;
+    color: #fff;
+    /*Centrar*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-inner h1 {
+    font-size: 68px;
+}
+
+.center {
+    text-align: center;
+}
+
+.just {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#event, #sched {
+    background: #F5F5F5 none repeat scroll 0% 0%;
+    padding: 60px 0px;
+}
+
+/*
+ * Conferencistas
+ */
+
+.speaker {
+    text-align: center;
+    color: #313131;
+    text-transform: uppercase;
+    margin: 25px 25px;
+}
+.speaker h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.speaker p {
+    margin-bottom: 5px;
+}
+.speaker img:hover {
+    opacity: .7;
+}
+
+.speaker-desc {
+    margin-top: 25px;
+}
+
+.speaker-position {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.speaker-email {
+    font-size: 12px;
+}
+
+.img-conf {
+    width: 300px;
+}
+
+/*
+ * Programación
+ */
+
+.outer-tabs {
+    background-color: #fbfbfb;
+    border: 1px solid #ddd;
+}
+
+.sched_nav {
+    padding-left: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+}
+
+.sched_nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.sched_tabs > li {
+    width: 33.3333333333%;
+}
+
+.sched_tabs > li {
+    float: left;
+}
+
+.sched_tabs > li > a {
+    border-radius: 0;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #ededed;
+    margin-right: 0;
+    padding: 12px;
+    background-color: #000;
+    transition: all 0.2s ease-in-out;
+}
+
+.sched_tabs > li.active > a, .sched_tabs > li.active > a:focus, .sched_tabs > li.active > a:hover, .sched_tabs > li > a:focus, .sched_tabs > li > a:hover {
+    background-color: #ffd400;
+    color: #fff;
+    border-color: #ffd400;
+    border-bottom-color: transparent;
+    text-decoration: none;
+}
+
+.nav-tabs > li > a {
+    border-radius: 0;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #ededed;
+    margin-right: 0;
+    padding: 15px;
+    background-color: #000;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover, .nav-tabs > li > a:focus, .nav-tabs > li > a:hover {
+    background-color: #ffd400;
+    color: #fff;
+    border-color: #ffd400;
+    border-bottom-color: transparent;
+}
+
+.schedule_item {
+    border-bottom: 1px solid #D8D8D8;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    width: 100%;
+    /*text-transform: uppercase;*/
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.item-desc {
+    margin-left: 10px;
+}
+
+.panel-default > .form-registro-heading {
+    background-color: #ffbf00;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #fff;
+}
+
+.panel-default > .form-registro-footer {
+    /*background-color: #337AB7;*/
+    /*background-color: #ffd400;*/
+    padding: 0px 0px 0px 0px;
+    background-color: #ffbf00;
+    color: #fff;
+}
+
+.btn-registro {
+    color: #FFF;
+    background-color: #ffd400;
+    border-color: #46B8DA;
+}
+
+.info-blog {
+    color: #036;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+img.ng-thumb {
+    height: 100px;
+    float: left;
+    display: block;
+    cursor: pointer;
+    margin: 2px 2px 0 0; 
+}
+
+.norm {
+    font-weight: normal;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.text-norm {
+    font-weight: normal;
+}

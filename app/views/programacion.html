@@ -1,0 +1,228 @@
+<div id="programacion" class="content" ng-controller="InfoCtrl as info">
+    <div class="container">
+        <div class="row box">
+            <h2 class="center content-header">Programación</h2>
+            <hr>
+            <div class="col-xs-3"> <!-- required for floating -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
+                    <li class="active"><a href="" data-target="#informacion" data-toggle="tab">Información de la programación</a></li>
+                    <li><a href="" data-target="#p_general" data-toggle="tab">Programación general</a></li>
+                    <li><a href="" data-target="#conferencistas" data-toggle="tab">Conferencistas invitados</a></li>
+                    <li><a href="" data-target="#actividades_e" data-toggle="tab">Actividades extra</a></li>
+                    <li><a href="" data-target="#chiva" data-toggle="tab">Chiva turistica</a></li>
+                    <li><a href="" data-target="#turismo" data-toggle="tab">Paquetes turísticos para el Cauca</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-9">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="informacion">
+                        <div class="row">
+                            <div class="col-xs-12 just">
+                                <h3>
+                                    Durante el encuentro se  realizarán diversas actividades enunciadas a continuación: 
+                                </h3>
+                                <h4>
+                                    <b>1. Los Día 11 y 12 de Agosto en la Sede Centro de convenciones Casa de la Moneda:</b>
+                                </h4>
+
+                                <ul>
+                                    <li>
+                                        Conferencias Nacionales , internacionales y  Mesas temáticas cuyas líneas de investigación son:
+                                        <ul>
+                                            <li>
+                                                Incremento en la apicultura y productividad
+                                            </li>
+                                            <li>
+                                                Asociatividad y agremiación
+                                            </li>
+                                            <li>
+                                                Importancia de la Apicultura
+                                            </li>
+                                            <li>
+                                                Las abejas en el Medio ambiente, Mercadeo y Opción de vida
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        De manera paralela y permanente  Feria Expo – apícola, una oportunidad para mostrar tus productos y servicios.  Debes adquirir un Estand.
+                                    </li>
+                                    <li>
+                                        I Encuentro Caucano de Apicultores
+                                    </li>
+                                </ul>
+
+                                <h4>
+                                    <b>2. El día 13 de Agosto  en la Sede fundación Universitaria, para el día de campo: </b>
+                                </h4>
+                                <ul>
+                                    <li>
+                                        Ruta ecológica y apícola (visita a Jardín botánico, apiarío, herbario, flora apícola, Museo apícola )
+                                    </li>
+                                    <li>
+                                        Premiación del concurso fotografía apícola
+                                    </li>
+                                    <li>
+                                        Premiación del concurso Innovación apícola
+                                    </li>
+                                </ul>
+
+                                <h4>
+                                    <b>Ver:</b> <a class="info-blog" href="">programación general</a>
+                                </h4>
+
+                                <h4>
+                                    <b>Nota:</b> Nos encontramos en proceso de evaluación de trabajos, una vez que el comité científico determine quienes podrán realizar su ponencia, la programación se actualizará.  Se estarán enviando circulares.
+                                </h4>
+
+                                <p>
+                                    <b>Participa  como ponente  y conoce las condiciones dar clik en:</b> <a class="info-blog" href="#">Inscripciones</a>
+                                </p>
+                                <p>
+                                    <b>Inscríbite al concurso de fotografía y de innovación dar clik en:</b> <a class="info-blog" href="#">Inscripciones</a> 
+                                </p>
+                                <p>
+                                    Si existe alguna duda, escríbenos : encuentroapicolapopayan@gmail.com
+                                </p>
+                                <h4>
+                                    <b>Existen dos actividades que NO se encuentran dentro de la inscripción del encuentro las cuales son:</b>
+                                </h4>
+                                <ul>
+                                    <li>
+                                        Chivas turística por la ciudad.
+                                    </li>
+                                    <li>
+                                        Rutas turísticas para el Cauca.
+                                    </li>
+                                </ul>
+                                <p>
+                                    El encuentro Destinará un Stan para la  Secretaria Departamental de Turismo la cual  estará  destinada para identificar  quienes son los interesados en realizar algunas rutas turísticas por el departamento del Cauca.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="p_general" ng-controller="ProgramacionCtrl as programacion">
+                        <div class="row">
+                            <ul class="sched_nav sched_tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="" data-target="#day1" aria-controls="day1" role="tab" data-toggle="tab"> Día 1
+                                        <br>
+                                        <span>11 de Agosto de 2016</span> </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="" data-target="#day2" aria-controls="day2" role="tab" data-toggle="tab"> Día 2
+                                        <br>
+                                        <span>12 de Agosto de 2016</span> </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="" data-target="#day3" aria-controls="day3" role="tab" data-toggle="tab"> Día 3
+                                        <br>
+                                        <span>13 de Agosto de 2016</span> </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="row">
+                            <!-- Tab panes -->
+                            <div class="well">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="day1">
+                                        <div class="schedule_item" ng-repeat="item in programacion.dia1.items">
+                                            <div class="item-desc">
+                                                <span class="fa fa-clock-o"></span> 
+                                                <span ng-bind="item.inicio"></span> - <span ng-bind="item.fin"></span>
+                                                <h4 class="panel-title">
+                                                    <span ng-bind="item.nombre"></span>
+                                                </h4>
+                                                <ul>
+                                                    <li ng-repeat="sub in item.sub" class="norm">
+                                                        <span ng-bind="sub.lugar"></span> : <span ng-bind="sub.nombre"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane " id="day2">
+                                        <div class="schedule_item" ng-repeat="item in programacion.dia2.items">
+                                            <div class="item-desc">
+                                                <span class="fa fa-clock-o"></span> 
+                                                <span ng-bind="item.inicio"></span> - <span ng-bind="item.fin"></span>
+                                                <h4 class="panel-title">
+                                                    <span ng-bind="item.nombre"></span>
+                                                </h4>
+                                                <ul>
+                                                    <li ng-repeat="sub in item.sub" class="norm">
+                                                        <span ng-bind="sub.lugar"></span> : <span ng-bind="sub.nombre"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane " id="day3">
+                                        <div class="schedule_item" ng-repeat="item in programacion.dia3.items">
+                                            <div class="item-desc">
+                                                <span class="fa fa-clock-o"></span> 
+                                                <span ng-bind="item.inicio"></span> - <span ng-bind="item.fin"></span>
+                                                <h4 class="panel-title">
+                                                    <span ng-bind="item.nombre"></span>
+                                                </h4>
+                                                <ul>
+                                                    <li ng-repeat="sub in item.sub" class="norm">
+                                                        <span ng-bind="sub.lugar"></span> : <span ng-bind="sub.nombre"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="conferencistas" ng-controller="ConferencistaCtrl as conf">
+                        <div class="row" ng-repeat="conferencista in conf.conferencistas">
+                            <div class="col-md-4 col-sm-4"  >
+                                <div class="speaker">
+                                    <figure>
+                                        <!--img alt="" class="img-responsive center-block img-conf" src="http://placehold.it/300x300"-->
+                                        <img alt="" class="img-responsive center-block img-conf" ng-src="<%conferencista.img%>">
+                                    </figure>
+                                    <h4>
+                                        <span ng-bind="conferencista.nombre"></span>
+                                    </h4>
+                                    <span class="speaker-email" ng-bind="conferencista.email"></span>     
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-sm-8 speaker-desc">
+                                <div class="speaker-position">
+                                    <span ng-bind="conferencista.cargo"></span>
+                                </div>
+                                <div class="just" >
+                                    <p ng-bind="conferencista.desc"></p>
+                                </div>
+                            </div>
+                        </div><!-- /.row -->
+                    </div>
+
+                    <div id="actividades_e"></div>
+                    <div id="chiva"></div>
+                    <div class="tab-pane" id="turismo">
+                        <p>
+                            Las rutas turísticas No se encuentran incluidas en el Valor de la Inscripción.
+                        </p>
+
+                        <p>
+                            Las personas que deseen adquirir un paquete turístico el encuentro dispondrá un Stand Institucional para la Mesa turística Departamental del Cauca la cual brindará todo el soporte técnico, acompañamiento, descripción de ruta y tarifa
+                        </p>
+
+                        <p>
+                            Por lo tanto, acercase al Stan institucional «Mesa turística Departamental»
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

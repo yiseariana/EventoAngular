@@ -1,0 +1,35 @@
+{
+  "name": "cooapica",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.4.0",
+    "bootstrap": "^3.2.0",
+    "animate.css": "^3.5.2",
+    "font-awesome": "fontawesome#^4.6.3",
+    "bootstrap-vertical-tabs": "^1.2.1",
+    "ngGallery": "*",
+    "angular-dialog-service": "^5.3.0",
+    "angular-ui-router": "^0.3.1",
+    "angular-toastr": "^1.7.0",
+    "satellizer": "^0.14.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.0"
+  },
+  "appPath": "app",
+  "moduleName": "cooapicaApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "fontawesome": {
+      "main": [
+        "./css/font-awesome.css"
+      ]
+    }
+  }
+}

@@ -1,0 +1,73 @@
+<div id="programacion" class="content" >
+    <div class="container">
+        <div class="row box">
+            <h2 class="center content-header"><span ng-bind="admin.titulo"></span></h2>
+            <hr>
+
+            <div class="col-xs-12">
+                <table class="table table-responsive table-bordered table-condensed table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Nombre
+                            </th>
+                            <th>
+                                Correo
+                            </th>
+                            <th>
+                                Recibo
+                            </th>
+                            <th>
+                                Ponencia
+                            </th>
+                            <th>
+                                Resumen
+                            </th>
+                            <th>
+                                Stand
+                            </th>
+                            <th>
+                                Aprobar
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="registro in admin.registros">
+                            <td>
+                                <span ng-bind="registro.nombre"></span>
+                            </td>
+                            <td>
+                                <span ng-bind="registro.correo"></span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info btn-block">
+                                    Recibo
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info btn-block" ng-show="registro.interes === 'Ponente'">
+                                    Ponencia
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info btn-block" ng-show="registro.n_concurso !== ''">
+                                    Resumen
+                                </button>
+                            </td>
+                            <td>
+                                <span class="fa fa-2x fa-check" ng-show="registro.interes === 'Stand'"></span>
+                                <span class="fa fa-2x fa-close" ng-show="registro.interes !== 'Stand'"></span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-block">
+                                    No aprobado
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
