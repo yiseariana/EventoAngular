@@ -63,6 +63,21 @@ a {
     width: 100%;
     min-height: 100%;
 }
+
+.organizadores {
+    background-image: url(../images/fondoO.jpg);
+    background-attachment: scroll !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+}
+
 .header-inner {
     text-align: center;
     min-height: 200px;
@@ -257,7 +272,23 @@ img.ng-thumb {
 .font-14 {
     font-size: 14px;
 }
+.font-20 {
+    font-size: 20px;
+}
 
 .text-norm {
     font-weight: normal;
+}
+
+.font-white {
+    color: #FFF;
+}
+
+.font-blue {
+    color: #3f18e0;
+}
+
+.img-logo {
+    width: 300px;
+    margin: 25px 25px;
 }

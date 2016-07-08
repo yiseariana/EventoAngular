@@ -1,17 +1,38 @@
-<div id="organizadores" class="content">
+<div id="organizadores" class="content organizadores">
     <div class="container">
         <div class="row">
-            <h2 class="center content-header">Organizadores</h2>
-            <hr>
-            <div class="col-md-12 just">
-                <p>
-                    La Cooperativa de Apicultores del Cauca «COOAPICA», La Universidad del Cauca, La Fundación Universitaria «FUP», La Corporación Universitaria Comfacauca y la Federación Colombiana de Criadores de Abejas – FEDEABEJAS,  tienen el gusto de invitar a Apicultores, profesionales, académicos y demás personas vinculadas al sector apícola en Colombia a participar en el del XVIII ENCUENTRO COLOMBIANO Y I ENCUENTRO CAUCANO DE APICULTORES.
-                </p>
-                <p>
-                    Es gratificante saber con seguridad que las experiencias, conferencias  y actividades  propuestas para compartir en este espacio serán de vital importancia tanto para crecer como apicultores mediante el intercambio de Conocimientos así como reflexionar el papel que juega la apicultura en el contexto socioeconómico, ambiental y  en la nueva etapa que comienza Colombia, el Postconflicto. 
-                </p>
+            <div class="col-md-9">
+                <h2 class="center content-header font-white"> Organizadores</h2>
+                <hr>
+                <div class="col-md-12 just font-white font-20">
+                    <p>
+                        La Cooperativa de Apicultores del Cauca «COOAPICA», La Universidad del Cauca, La Fundación Universitaria «FUP», La Corporación Universitaria Comfacauca y la Federación Colombiana de Criadores de Abejas – FEDEABEJAS,  tienen el gusto de invitar a Apicultores, profesionales, académicos y demás personas vinculadas al sector apícola en Colombia a participar en el del XVIII ENCUENTRO COLOMBIANO Y I ENCUENTRO CAUCANO DE APICULTORES.
+                    </p>
+                    <!--p>
+                        Es gratificante saber con seguridad que las experiencias, conferencias  y actividades  propuestas para compartir en este espacio serán de vital importancia tanto para crecer como apicultores mediante el intercambio de Conocimientos así como reflexionar el papel que juega la apicultura en el contexto socioeconómico, ambiental y  en la nueva etapa que comienza Colombia, el Postconflicto. 
+                    </p-->
 
+                </div>
             </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <figure>
+                            <img alt="" class="img-responsive center-block img-logo" src="images/logoFedeabejas.png">
+                        </figure>
+                        <figure>
+                            <img alt="" class="img-responsive center-block img-logo" src="images/logoUnicauca.png">
+                        </figure>
+                        <figure>
+                            <img alt="" class="img-responsive center-block img-logo" src="images/logoFup.png">
+                        </figure>
+                        <figure>
+                            <img alt="" class="img-responsive center-block img-logo" src="images/logoUnicomfacauca.png">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!--div class="row p50">
             <div class="col-sm-6">
@@ -28,3 +49,13 @@
         </div><!--/.row-->
     </div>
 </div>
+
+<script type="text/javascript">
+    var f1 = function () {
+        var fulls = $('#organizadores');
+        var win = $(window);
+        fulls.height(win.height());
+    };
+    $(window).bind('resize', f1);
+    f1();
+</script>
