@@ -14,6 +14,7 @@ angular.module('cooapicaApp')
             vm.titulo = "Inscritos";
 
             vm.registros = [];
+            vm.url = "google.com";
 
             vm.getRegistros = function () {
 
@@ -27,8 +28,30 @@ angular.module('cooapicaApp')
                         }
                 );
             };
-            
-            
+
+            vm.aprobar = function (registro) {
+                RegistroService.aprobar(registro.cedula).then(
+                        function (data) {
+                            registro.aprobado = data;
+                        },
+                        function (error) {
+                            console.log(error);
+                        }
+                );
+            };
+
+            vm.desaprobar = function (registro) {
+                RegistroService.desaprobar(registro.cedula).then(
+                        function (data) {
+                            registro.aprobado = data;
+                        },
+                        function (error) {
+                            console.log(error);
+                        }
+                );
+            };
+
+
             vm.getRegistros();
 
         });

@@ -11,7 +11,7 @@ angular.module('cooapicaApp')
         .controller('RegistroCtrl', function ($scope, RegistroService, toastr) {
 
             var vm = this;
-    
+
             vm.titulo = 'Inscripciones';
             vm.interes = 'Asistente';
             vm.concurso = 'No aplica';
@@ -38,15 +38,17 @@ angular.module('cooapicaApp')
             vm.nEntidad = ''; //Nombre de la entidad
             vm.nTrabajo = ''; //Nombre del trabajo o experiencia
 
+            vm.subiendo = false;
+
             vm.limpiarFormulario = function () {
                 vm.interes = 'Asistente';
                 vm.concurso = 'No aplica';
                 vm.nombre1 = '';
                 vm.tituloProducto = '';
                 vm.registro = {};
-                vm.nombre = 'Arnold';
-                vm.cedula = '1061697564';
-                vm.correo = 'arnoldjair@hotmail.com';
+                vm.nombre = '';
+                vm.cedula = '';
+                vm.correo = '';
                 vm.rn1 = false;
                 vm.rn2 = false;
                 vm.rConcurso = null;
@@ -122,10 +124,12 @@ angular.module('cooapicaApp')
 
                 console.log("Enviar formulario registro");
                 var recibo = vm.recibo;
+                vm.subiendo = true;
                 RegistroService.registrar(vm.registro).then(
                         function (data) {
                             toastr.success('Registro completado. Pronto le será enviado el comprobante de inscripción a su correo electrónico.', 'Registro');
                             vm.limpiarFormulario();
+                            vm.subiendo = false;
                         },
                         function (error) {
                             switch (error) {
@@ -139,6 +143,8 @@ angular.module('cooapicaApp')
                                     toastr.error('Debe adjuntar el recibo de pago')
                                     break;
                             }
+
+                            vm.subiendo = false;
                         }
                 );
             };

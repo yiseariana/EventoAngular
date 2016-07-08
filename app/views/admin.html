@@ -40,27 +40,27 @@
                                 <span ng-bind="registro.correo"></span>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-info btn-block">
+                                <a class="btn btn-info btn-block" target="_blank" href="api/registroApi/archivo?tipo=n_recibo&archivo=<%registro.n_recibo%>" ng-show="registro.n_recibo !== ''">Recibo</a>
+                                <!--button type="button" class="btn btn-info btn-block" ng-click="">
                                     Recibo
-                                </button>
+                                </button-->
                             </td>
                             <td>
-                                <button type="button" class="btn btn-info btn-block" ng-show="registro.interes === 'Ponente'">
-                                    Ponencia
-                                </button>
+                                <a class="btn btn-info btn-block" target="_blank" href="api/registroApi/archivo?tipo=n_ponencia&archivo=<%registro.n_ponencia%>" ng-show="registro.n_ponencia !== ''">Ponencia</a>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-info btn-block" ng-show="registro.n_concurso !== ''">
-                                    Resumen
-                                </button>
+                                <a class="btn btn-info btn-block" target="_blank" href="api/registroApi/archivo?tipo=n_concurso&archivo=<%registro.n_concurso%>" ng-show="registro.n_concurso !== ''">Resumen</a>
                             </td>
                             <td>
                                 <span class="fa fa-2x fa-check" ng-show="registro.interes === 'Stand'"></span>
                                 <span class="fa fa-2x fa-close" ng-show="registro.interes !== 'Stand'"></span>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-danger btn-block">
+                                <button type="button" class="btn btn-danger btn-block" ng-show="registro.aprobado === '0'" ng-click="admin.aprobar(registro)">
                                     No aprobado
+                                </button>
+                                <button type="button" class="btn btn-success btn-block" ng-show="registro.aprobado === '1'" ng-click="admin.desaprobar(registro)">
+                                    Aprobado
                                 </button>
                             </td>
                         </tr>

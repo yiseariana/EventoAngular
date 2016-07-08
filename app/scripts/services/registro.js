@@ -13,6 +13,8 @@ angular.module('cooapicaApp')
             this.baseUrl = '/';
             this.url = this.baseUrl + 'api/registroApi/registro';
             this.urlRegistros = this.baseUrl + 'api/registroApi/registros';
+            this.urlAprobar = this.baseUrl + 'api/registroApi/aprobar';
+            this.urlDesaprobar = this.baseUrl + 'api/registroApi/desaprobar';
 
             this.registrar = function (registro) {
                 var deferred = $q.defer();
@@ -56,6 +58,30 @@ angular.module('cooapicaApp')
             this.getRegistros = function () {
                 var deferred = $q.defer();
                 $http.get(this.urlRegistros)
+                        .success(function (data) {
+                            deferred.resolve(data.data);
+                        })
+                        .error(function (error) {
+                            deferred.reject(error);
+                        });
+                return deferred.promise;
+            };
+
+            this.aprobar = function (cedula) {
+                var deferred = $q.defer();
+                $http.get(this.urlAprobar, {params: {cedula: cedula}})
+                        .success(function (data) {
+                            deferred.resolve(data.data);
+                        })
+                        .error(function (error) {
+                            deferred.reject(error);
+                        });
+                return deferred.promise;
+            };
+
+            this.desaprobar = function (cedula) {
+                var deferred = $q.defer();
+                $http.get(this.urlDesaprobar, {params: {cedula: cedula}})
                         .success(function (data) {
                             deferred.resolve(data.data);
                         })

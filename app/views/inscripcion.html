@@ -303,11 +303,14 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="4" class="center">
+                                                <td colspan="4" class="center" ng-hide="registro.subiendo">
                                                     <button type="button" class="btn btn-success btn-lg" ng-click="registro.enviar()" 
                                                             ng-disabled="registro.rn1 || registro.rn2 || ((form.$dirty && form.$invalid) || form.$pristine)">
                                                         Enviar
                                                     </button>
+                                                </td>
+                                                <td colspan="4" class="center" ng-show="registro.subiendo">
+                                                    <span class="fa fa-spinner fa-5x fa-spin"></span>
                                                 </td>
                                             </tr>
                                         </tbody>   
