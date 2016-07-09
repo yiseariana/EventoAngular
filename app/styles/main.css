@@ -78,6 +78,20 @@ a {
     min-height: 100%;
 }
 
+.cooapica {
+    background-image: url(../images/fondoCooapica1.png);
+    background-attachment: scroll !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+}
+
 .header-inner {
     text-align: center;
     min-height: 200px;

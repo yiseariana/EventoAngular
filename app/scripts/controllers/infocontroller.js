@@ -10,6 +10,8 @@
 angular.module('cooapicaApp')
         .controller('InfoCtrl', function () {
             var vm = this;
+    
+            vm.titulo = 'Presentación';
 
             this.images = [
                 {
@@ -33,5 +35,10 @@ angular.module('cooapicaApp')
                     img: 'images/cm5.jpg'
                 }
             ];
-
+            
+            vm.mostrarSede = function() {
+                vm.titulo = 'La sede';
+                initMap();
+            }
+            
         });

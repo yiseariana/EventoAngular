@@ -1,35 +1,36 @@
 <div id="info" class="content" ng-controller="InfoCtrl as info">
     <div class="container">
         <div class="row box">
-            <h2 class="center content-header">Información</h2>
+            <h2 class="center content-header"><span ng-bind="info.titulo"></span></h2>
             <hr>
-            <div class="col-xs-3"> <!-- required for floating -->
+            <div class="col-xs-2"> <!-- required for floating -->
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
-                    <li class="active"><a href="" data-target="#presentacion" data-toggle="tab">Presentación</a></li>
-                    <li><a href="" data-target="#objetivos" data-toggle="tab">Objetivos</a></li>
-                    <li><a href="" data-target="#justificacion" data-toggle="tab">Justificación</a></li>
-                    <li><a href="" data-target="#popayan" data-toggle="tab">La Ciudad</a></li>
-                    <li><a href="" data-target="#sede" data-toggle="tab">La Sede</a></li>
-                    <li><a href="" data-target="#organigrama" data-toggle="tab">Organigrama</a></li>
-                    <li><a href="" data-target="#oferta-hotelera" data-toggle="tab">Oferta Hotelera</a></li>
+                    <li class="active"><a href="" data-target="#presentacion" data-toggle="tab" ng-click="info.titulo = 'Presentación'">Presentación</a></li>
+                    <!--li><a href="" data-target="#objetivos" data-toggle="tab" ng-click="info.titulo = 'Objetivos'">Objetivos</a></li-->
+                    <!--li><a href="" data-target="#justificacion" data-toggle="tab">Justificación</a></li-->
+                    <li><a href="" data-target="#popayan" data-toggle="tab" ng-click="info.titulo = 'La ciudad'">La Ciudad</a></li>
+                    <li><a href="" data-target="#sede" data-toggle="tab" ng-click="info.mostrarSede()">La Sede</a></li>
+                    <!--li><a href="" data-target="#organigrama" data-toggle="tab">Organigrama</a></li-->
+                    <li><a href="" data-target="#oferta-hotelera" data-toggle="tab" ng-click="info.titulo = 'Oferta Hotelera'">Oferta Hotelera</a></li>
                     <li><a href="" data-target="#restaurantes" data-toggle="tab">Restaurantes típicos y de la ciudad</a></li>
                 </ul>
             </div>
-            <div class="col-xs-9">
+            <div class="col-xs-10">
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div class="tab-pane active" id="presentacion">
                         <div class="row">
-                            <div class="col-xs-12 just">
-                                Conscientes de la importancia de las abejas y el papel que desempeñan como polinizadores para garantizar la soberanía alimentaria del planeta se propone  realizar el XVIII encuentro nacional de apicultura como un espacio de reflexión, análisis y difusión de los procesos que se vienen realizando entorno al fortalecimiento, competitividad y mejoramiento del sector apícola en el País con la finalidad de generar propuestas estratégicas para el postconflicto.
-                                El  encuentro se desarrollará en el Departamento del Cauca, el cual,  a pesar de ser uno de los Departamentos más diversos de Colombia está a punto de perder sus polinizadores endémicos, su desaparición a pasos agigantados se debe  a varias causas generadas por el ser humano como la tala y quema de bosques, el uso indiscriminado de agroquímicos en la producción agropecuaría, manejo inadecuado de las abejas, contaminación ambiental y calentamiento global,  todo esto ha generado una preocupación  por promover el cuidado, conservación y preservación de las abejas ya que su desaparición afecta directamente el equilibrio de la naturaleza.
-                                Por otra parte, la apicultura también  representa para la sociedad una alternativa para el mejoramiento integral de la calidad de vida, en primer lugar es una actividad productiva que permite  la autosostenibilidad económica de la unidad familiar y en segundo lugar es una práctica pedagógica mediante la  cual las abejas enseñan al individuo la forma de cooperar y trabajar en conjunto, además de la posibilidad de permanecer en el campo realizando una actividad productiva, estos elementos le aportan al proceso de paz la oportunidad de crear espacios de resocialización desde una práctica económica  con impacto sicosocial.
-                                El espacio invita a apicultores, organizaciones apícolas, productores agropecuaríos, académicos, entidades del Estado, personas vinculadas al sector apícola, interesados, a reflexionar sobre la PAZ de una manera integral, Paz para la humanidad, Paz para el Medio ambiente PAZ para y desde las abejas. 
+                            <div class="col-xs-7 just">
+                                Conscientes de la importancia de las abejas y el papel que desempeñan como polinizadores para garantizar la soberanía alimentaria del planeta se propone  realizar el XVIII Encuentro  Colombiano y I Encuentro Caucano de Apicultores «La Apicultura en el postconflicto» como un espacio de reflexión, análisis y difusión de los procesos que se vienen realizando entorno al fortalecimiento, productividad, competitividad y mejoramiento del sector apícola en el País con la finalidad de generar  estratégicas para el postconflicto.
+                                El espacio invita a apicultores, organizaciones apícolas, productores agropecuaríos, académicos, entidades del Estado, y demás interesados, a reflexionar sobre la PAZ de una manera integral, Paz para la humanidad, Paz para el  ambiente PAZ para y desde las abejas.
+                            </div>
+                            <div class="col-xs-5">
+                                <figure>
+                                    <img alt="" class="img-responsive " src="images/img2.jpg">
+                                </figure>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane" id="objetivos">
                         <div class="row just">
                             <div class="col-xs-5">
                                 <h3>
@@ -59,68 +60,45 @@
                             </div>    
 
                         </div>
+                        <div class="row">
+                            <div class="col-xs-12 just">
+                                <h3>
+                                    Justificación
+                                </h3>
+                                <p>
+                                    Este espacio permitirá  reflexionar sobre el  panorama de oportunidades y retos que tienen los apicultores en el país frente a  los requerimientos de los mercados nacionales e internacionales en la demanda de los productos apícolas. Así mismo, se convierte en una herramienta que moviliza intercambio de experiencias, reflexiones, circulación de los productos apícolas y  reconocimiento de trabajos intersectoriales. En esta medida, el Encuentro puede ser considerado como la oportunidad para actuar como un enjambre cuyo horizonte político está basado en la unión, asociatividad y alternativas de solución para el proceso del postconflicto.
+                                </p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="tab-pane" id="objetivos">
+
                     </div>
                     <div class="tab-pane" id="justificacion">
-                        <div class="col-xs-12 just">
-                            <p>El Décimo Octavo encuentro de apicultores a nivel nacional  tendrá por sede el Departamento del Cauca específicamente la Ciudad de Popayán, este espacio permitirá  reflexionar sobre el  panorama de oportunidades y retos que tienen los apicultores en el país frente a  los requerimientos de los mercados nacionales e internacionales en la demanda de los productos apícolas. Así mismo,  induce a  la construcción participativa de estrategias políticas para el mejoramiento  organizativo de los productores como principales ejes de acción en la economía rural.</p>
-                             
-                            <p>De esta manera, este espacio se convierte en una herramienta que moviliza intercambio de experiencias, reflexiones, circulación de los productos apícolas, reconocimiento de trabajos intersectoriales y propuestas de proyectos estratégicos que mejoren el sector apícola y contribuyan  al restablecimiento del tejido social de la población.</p>
-                             
-                            <p>En esta medida, el congreso puede ser considerado como la oportunidad para actuar como un enjambre cuyo horizonte político está basado en la unión, asociatividad y alternativas de solución para el proceso del postconflicto. </p>
-                        </div>
+
                     </div>
                     <div class="tab-pane" id="popayan">
-                        <div class="col-xs-12 just">
-                            <p>Popayàn es la Capital del Departamento del Cauca,  reconocida por su  arquitectura colonial fue fundada el  13 de enero de 1537  por Belalcázar, quien pasaba hacia el norte de Colombia en busca del mítico tesoro de El Dorado. Su nombre, según la tradición oral de la ciudad, proviene del Cacique Payán, jefe de la tribu indígena que habitaba el área alrededor del monte hoy conocido como cerro de la Eme o de las Tres Cruces cuando llegaron los conquistadores españoles. Según el historiador Arcesio Aragón, el origen de la palabra es Pampayán, que se compone de dos vocablos quechuas: pampa, cuyo significado es, valle, sitio, paso; y yan, cuyo significado es río. Paso del río, ya que por allí pasa el río Cauca.  
-                                Al ser colonial, cuenta con numerosas joyas arquitectónicas como el  Puente del  Humilladero, Capilla de Belèn, Iglesia del Carmen, San Francisco y Santodomingo, templo de la encarnaciòn, La Ermita, Museo de Arte Religioso, Casa Museo Negret, La torre del Reloj, Panteòn de los próceres, Museo arquidiocesano religioso.
+                        <div class="col-xs-7 just">
+                            <p>
+                                Popayán es la Capital del Departamento del Cauca,  reconocida por su  arquitectura colonial ya que fue fundada el  13 de enero de 1537  cuenta con numerosas joyas arquitectónicas como el  Puente del  Humilladero, Capilla de Belèn, Iglesia del Carmen, San Francisco y Santodomingo, templo de la encarnaciòn, La Ermita, Museo de Arte Religioso, Casa Museo Negret, La torre del Reloj, Panteòn de los próceres, Museo arquidiocesano religioso.
                             </p>
-
                             <p>
                                 Se encuentra a una  altitud media  1760 m sobre el nivel del mar y se mantiene a una  temperatura promedio de 18/20 °C. 
-                                El 28 de septiembre de 2009 las Procesiones de Semana Santa de Popayán fueron declaradas por la UNESCO como Obra Maestra del Patrimonio Oral e Inmaterial de la Humanidad. Asìmimso su gastronomía fue reconocida por mantener sus formas de preparación a travez de la tradición oral.
-                                Popayán es el único lugar de Latinoamérica en haber sido declarado Ciudad de la Gastronomía de la Unesco, gracias a la oferta de su cocina local. Desde el año 2004 se realiza anualmente en el mes de agosto el Festival Gastronómico Internacional de Popayán. En cada edición cuenta con un país invitado y una nómina de conferencistas destacados entre los que sobresalen algunos de los más afamados chefs del mundo entero.
-                                Los platos típicos de la ciudad son un legado de la interacción cultural española e indígena, integrando componentes propios de la región con frutos traídos de España.
                             </p>
-
                             <p>
-                                Carantanta: es un tipo de pasaboca frito que resulta del pegado que deja en la paila el proceso de elaboración de la masa de maíz con la que se hacen las tortillas.
+                                El 28 de septiembre de 2009 las Procesiones de Semana Santa de Popayán fueron declaradas por la UNESCO como Obra Maestra del Patrimonio Oral e Inmaterial de la Humanidad. 
                             </p>
-
                             <p>
-                                Sopas: Caldo batido, sancocho de gallina, sopa de tortilla, sango, sopa de carantanta, sopa de envueltos, sopa de legumbres, de hortalizas y masitas.
+                                Es  el único lugar de Latinoamérica en haber sido declarado Ciudad de la Gastronomía de la Unesco, gracias a la oferta de su cocina local. 
                             </p>
-
-                            <p>
-                                Platos:  tamales de pipián, empanadas de pipián,Ternero, tripaso de mani, papas chorriadas con guiso de mani.
-                            </p>
-
-                            <p>
-                                Vegetales: Papitas de huerta fríana, ullucos, envueltos de maíz.
-                            </p>
-
-                            <p>
-                                Salsas y aderezos: ají pique, ají de maní, aji de piña, salsa crema.
-                            </p>
-
-                            <p>
-                                Pasteles: pastel de tortilla, pastel de arracacha, torta blanca, torta de banano.
-                            </p>
-
-                            <p>
-                                Amasijos: cucas, envueltos de choclo, molletes, pambazos, rosquillas, holjaldras, gelatinas de pata.
-                            </p>
-
-                            <p>
-                                Bebidas:agua de toley, gaseosa king sabor tamarindo
-                            </p>
-
-                            <p>
-                                Se destaca en Popayán el plato de nochebuena o plato navideño, que por su contenido es el más completo de Colombia, compuesto por hojaldras, rosquillas, dulce blanco, manjarillo, dulce cortado, desamargados, entre otros.
-                            </p>
-
                             <p>
                                 Es conocida también como la «Ciudad Blanca», «Ciudad Fecunda», «Ciudad Procera» y «Ciudad Universitaria».
                             </p>
+                        </div>
+                        <div class="col-xs-5">
+                            <figure>
+                                <img alt="" class="img-responsive " src="images/popayan3.jpg">
+                            </figure>
                         </div>
                     </div>
                     <div class="tab-pane" id="sede">
@@ -173,7 +151,122 @@
                             </div>
                         </div></div>
                     <div class="tab-pane" id="organigrama">Organigrama</div>
-                    <div class="tab-pane" id="oferta-hotelera">Oferta Hotelera</div>
+                    <div class="tab-pane" id="oferta-hotelera">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <table class="table table-responsive table-bordered table-hover">
+                                    <thead >
+                                        <tr>
+                                            <th class="center">
+                                                HOTEL
+                                            </th>
+                                            <th class="center">
+                                                sencilla/noche 
+                                            </th>
+                                            <th class="center">
+                                                doble/noche 
+                                            </th>
+                                            <th class="center">
+                                                tripe/noche 
+                                            </th>
+                                            <th class="center">
+                                                CONTACTO
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>HOTEL SAN MARTÍN</td>
+                                            <td><span>$140.000 + desayuno</span></td>
+                                            <td><span>$180.000 + desayuno</span></td>
+                                            <td><span>$220.000 + desayuno</span></td>
+                                            <td><span>(092) 8237070</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>LA PLAZUELA HOTEL</td>
+                                            <td><span>$140.000 + desayuno</span></td>
+                                            <td><span>$140.000 + desayuno</span></td>
+                                            <td><span>$190.000 + desayuno</span></td>
+                                            <td><span>(092) 8241084</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HOTEL LA ALCAYATA</td>
+                                            <td><span>$82.000 + desayuno</span></td>
+                                            <td><span>-</span></td>
+                                            <td><span>-</span></td>
+                                            <td><span>(092) 8243228</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HOTEL PUERTA DEL SOL</td>
+                                            <td><span>$75.000 ($58.000 sin desayuno)</span></td>
+                                            <td><span>$85.000 ($68.000 sin desayuno)</span></td>
+                                            <td><span>$125.000 ($90.000 sin desayuno)</span></td>
+                                            <td><span>(092) 8239814</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HOTEL VALLE DE PUBENZA</td>
+                                            <td><span>$75.000 + desayuno</span></td>
+                                            <td><span>$100.000 + desayuno</span></td>
+                                            <td><span>$150.000 + desayuno</span></td>
+                                            <td><span>(092) 821636</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HOTEL EL RECUERDO</td>
+                                            <td><span>$111.500 + desayuno</span></td>
+                                            <td><span>$146.200 + desayuno</span></td>
+                                            <td><span>$190.000 + desayuno</span></td>
+                                            <td><span>(092) 8233156</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HOTEL CAMINO REAL</td>
+                                            <td><span>$89.500 + desayuno</span></td>
+                                            <td><span>123.500 + desayuno</span></td>
+                                            <td><span>$154.500 + desayuno</span></td>
+                                            <td><span>(092) 8334444</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HOTEL SAN JERONIMO</td>
+                                            <td><span>$90.000 + desayuno</span></td>
+                                            <td><span>$120.000 + desayuno</span></td>
+                                            <td><span>$160.000 + desayuno</span></td>
+                                            <td><span>(092) 8222020</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HOTEL ACHALAY</td>
+                                            <td><span>$80.000  + desayuno</span></td>
+                                            <td><span>$110.000+ desayuno</span></td>
+                                            <td><span>$140.000 + desayuno</span></td>
+                                            <td><span>(092) 8242737</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HOTEL COLONIAL</td>
+                                            <td><span>$65.00 + desayuno</span></td>
+                                            <td><span>$85.000 + desayuno</span></td>
+                                            <td><span>$120.000 + desayuno</span></td>
+                                            <td><span>(092) 8317848</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HOTEL LOS BALCONES</td>
+                                            <td><span>$122.000 +desayuno</span></td>
+                                            <td><span>168.000 + desayuno</span></td>
+                                            <td><span>240.000 + desayuno (4)</span></td>
+                                            <td><span>(092) 8242030</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HOSTAL TRAIL</td>
+                                            <td><span>$42.00 - $52.000</span></td>
+                                            <td><span>$58.000 - $70.000</span></td>
+                                            <td><span>-</span></td>
+                                            <td><span>(092) 8317871</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span class="font-14 text-primary">
+                                    Algunos valores no incluyen impuestos como el IVA (16%)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab-pane" id="restaurantes">Restaurantes</div>
                 </div>
             </div>

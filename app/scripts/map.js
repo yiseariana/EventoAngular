@@ -6,6 +6,7 @@
 
 
 function initMap() {
+    console.log("initMap");
     var myLatLng = {
         lng: -76.6095757484436,
         lat: 2.444207174443903,
